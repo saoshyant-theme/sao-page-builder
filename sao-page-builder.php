@@ -108,24 +108,7 @@ function sao_builder_config($out = false) {
 	}  
 }
  
-add_action( 'edit_form_after_title', 'sao_edit_form_after_title' );	 
-function sao_edit_form_after_title(){
-    global $typenow, $pagenow;
-    if( in_array($typenow, array('post', 'page','product') ))
-    {
-       
-	   global  $post;
- 
-	$sao_show_page_builder = get_post_meta($post->ID, 'sao_show_page_builder', true);
-	
-	$sao = !empty($sao_show_page_builder) ? 'sao_page_builder':'sao_default_editor';
-	
-    echo '<div  class="add_sao_page_builder '.esc_attr($sao) .'">';
-    echo '<a href="#" class="button  button-primary  switch_sao_page_builder">'.__('Switch to Sao Page Builder','sao').'</a>';
-    echo '<a href="#" class="button  button-primary  switch_sao_default_editor">'.__('Switch to Default Editor','sao').'</a>';
-    echo '</div>'; 
-    }
-}
+
 /********************************************************************
 Admin Builder Enqueue
 *********************************************************************/
