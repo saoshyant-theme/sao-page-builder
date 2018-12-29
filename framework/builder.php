@@ -28,7 +28,19 @@ function sao_builder_meta($post) {
     $element_json = get_post_meta($post->ID, 'sao_element', true);
   	$element= sao_options_array_row($element_json);
  
-	  
+ 	global  $post;
+ 
+	$sao_show_page_builder = get_post_meta($post->ID, 'sao_show_page_builder', true);
+	
+	$sao = !empty($sao_show_page_builder) ? 'sao_page_builder':'sao_default_editor';
+	
+    echo '<div  class="add_sao_page_builder '.esc_attr($sao) .'">';
+    echo '<a   class="button  button-primary  switch_sao_page_builder">'.__('Switch to Sao Page Builder','sao').'</a>';
+    echo '<a  class="button  button-primary  switch_sao_default_editor">'.__('Switch to Default Editor','sao').'</a>';
+    echo '</div>'; 
+	
+	
+	
 	echo '<div class="sao_builder sao_builder_main">';
 		echo '<a class="sao_full_template_full sao_full_screen_page_builder ">'.esc_html__('Full Screen','sao').'</a>';
 		echo '<a class="sao_full_template_full_close sao_full_screen_close ">'.esc_html__('Close Full Screen','sao').'</a>';

@@ -12,23 +12,38 @@
 }
 .add_sao_page_builder.sao_default_editor .switch_sao_page_builder{
 	display:inline-block !important;
-}
+ }
+ 
+ 
 .add_sao_page_builder.sao_page_builder .switch_sao_default_editor{
 	display:inline-block !important;
 }
-.sao-hide-wp-editor .postarea , .sao-hide-wp-editor .composer-switch{
+.add_sao_page_builder  .button {
+
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 25px !important;
+    height: auto !important;
+
+}
+.add_sao_page_builder{
+	padding:20px;
+	margin:0px;
+}
+.sao-hide-wp-editor .postarea , .sao-hide-wp-editor .composer-switch,.sao-hide-wp-editor .editor-block-list__layout{
 	display:none !important
 	
 }
-#sao_builder_metabox{
+.sao_builder_main{
 	display:none !important;
 }
 .sao_builder a{
 	color:#20282f;
 	text-decoration: inherit;
 }
-#sao_builder_metabox.sao-show-page-builder{
-	display:block !important;
+#sao_builder_metabox.sao-show-page-builder .sao_builder_main{
+	display:inline-block !important;
 }
  .sao_builder {
 	box-sizing: border-box;
